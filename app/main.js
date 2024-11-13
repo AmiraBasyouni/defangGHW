@@ -6,13 +6,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.all("/", (req, res) => {
-    res.send({
-        "path" : req.path,
-        "method" : req.method,
-        "headers" : req.headers,
-        "args" : req.query,
-        "body" : req.body
-    });
+    res.send('hello world!');
 });
 
 app.listen(3000, () => {
